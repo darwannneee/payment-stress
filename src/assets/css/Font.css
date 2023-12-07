@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Kanit&family=Poppins&display=swap');
+
+.titleStress {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fontDescription {
+    font-family: 'Kanit', sans-serif;
+}
