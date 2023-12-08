@@ -29,7 +29,7 @@ function Navbar() {
                     </div>
                 </div>
 
-                <div className={`${isOpen ? 'block' : 'hidden'} bg-black md:flex flex-col md:flex-row justify-between w-full md:items-center md:border-none mb-2 md:mb-0`}>
+                <div className={`${isOpen ? 'block' : 'hidden'} md:flex flex-col md:flex-row justify-between w-full md:items-center md:border-none mb-2 md:mb-0`}>
                     <div className="flex flex-col md:flex-row mx-auto fontDescription md:text-base">
                         <a href="/psikolog" className="block px-6 py-2 md:mr-7 hover:border-l-8 border-violet-700">home</a>
                         <a href="/#feedback" className="block px-6 py-2 md:mr-7 hover:border-l-8 border-violet-700">about</a>

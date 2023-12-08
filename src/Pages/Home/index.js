@@ -2,6 +2,7 @@ import Feature from "../../Components/Home/Feauture";
 import Payment from "../../Components/Home/Payment";
 import Navbar from "../../Components/Home/Navbar";
 
+
 function Home() {
     return(
         <div>

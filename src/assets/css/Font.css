@@ -5,9 +5,10 @@
 }
 
 .title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Printvetica';
+    src: url('Printvetica.otf') format('opentype')
 }
 
 .fontDescription {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
