@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div>
         {/* Header */}
-        <nav className="bg-black text-white w-full h-14 shadow-transparent2 flex-col fixed top-0">
+        <nav className="bg-black text-white w-full h-14 flex-col fixed top-0">
             <div className="flex flex-col md:flex-row">
                 <div className={`flex justify-between items-center pt-3 md:pt-4 px-8 md:pl-20 xl:pl-32 md:border-none ${isOpen ? 'border-b' : 'none'}`}>
                     <div className="flex">
@@ -29,19 +29,19 @@ function Navbar() {
                     </div>
                 </div>
 
-                <div className={`${isOpen ? 'block' : 'hidden'} md:flex flex-col md:flex-row justify-between w-full md:items-center md:border-none mb-2 md:mb-0`}>
+                <div className={`${isOpen ? 'block' : 'hidden'} bg-black md:flex flex-col md:flex-row justify-between w-full md:items-center md:border-none mb-2 md:mb-0`}>
                     <div className="flex flex-col md:flex-row mx-auto fontDescription md:text-base">
                         <a href="/psikolog" className="block px-6 py-2 md:mr-7 hover:border-l-8 border-violet-700">home</a>
                         <a href="/#feedback" className="block px-6 py-2 md:mr-7 hover:border-l-8 border-violet-700">about</a>
                         <a href="/tentangkami" className="block px-6 md:mr-7 py-2 hover:border-l-8 border-violet-700">article</a>
                         <a href="/tentangkami" className="block px-6 py-2 bg-violet-700">payment</a>
                     </div>
-                    <div className="flex md:flex-row mx-6 md:mx-0">
+                    <div className="flex mx-6 pt-2 md:pt-2 md:mx-0 md:flex-row">
                         <a href="https://twitter.com/StressCapitals">
                             <img src={Twitterlogo} className="w-5 md:w-5 md:mx-8" alt="Twitter Logo"/>
                         </a>
                         <a href="https://discord.gg/3Msv2HcN">
-                            <img src={DiscordLogo} className="w-5 md:w-5 md:mr-20 xl:mr-44" alt="Discord Logo"/>
+                            <img src={DiscordLogo} className="w-5 ml-4 md:w-5 md:mr-20 xl:mr-44" alt="Discord Logo"/>
                         </a>
                     </div>
                 </div>

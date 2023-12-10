@@ -59,7 +59,7 @@ function Payment() {
     };
     
     const handleDecreaseTIP = () => {
-        setTip((Tip) => Math.max(Tip - 0.1, 0.2)); // Ensure month doesn't go below 1
+        setTip((Tip) => Math.max(Tip - 1, 1)); // Ensure month doesn't go below 1
     };
 
 
@@ -101,12 +101,12 @@ function Payment() {
             <hr className="w-full border-white border mt-14 md:mt-10"></hr>
 
             {/* Display message to enter Discord ID if it's not set */}
-            {!discordId && <h1 className="text-center fontDescription md:mt-10 text-violet-500">Input your Discord ID first.</h1>}
+            {!discordId && <h1 className="pt-5 text-center fontDescription text-violet-500 md:mt-10">Input your Discord ID first.</h1>}
             
             {isEselon ? (
-                <h1 className="text-center fontDescription md:mt-10 text-violet-500">Account Discord Already Eselon.</h1>
+                <h1 className="text-center fontDescription text-violet-500 md:mt-10">Account Discord Already Eselon.</h1>
             ) : (discordId > 0 && !isEselon) && (
-                <div className="mt-8 md:mt-14 fontDescription">
+                <div className="mt-8 fontDescription md:mt-14 ">
                     {/* Subscription */}
                     <div className="grid grid-cols-2">
                         <h1>Subscription</h1>
@@ -118,11 +118,11 @@ function Payment() {
                         <div className="flex">
                             <h1 className="pl-24">
                             {/* Input TIP */}
-                            <input className="w-64 h-9 md:w-10 md:h-6 rounded-xl bg-slate-200 md:mt-2 text-black text-center"
+                            <input className="w-6 h-9 rounded-xl bg-slate-200 text-black text-center md:w-10 md:h-6 md:mt-2"
                             value={Tip}
-                            onChange={(e) => setTip(e.target.value)}></input></h1>\
+                            onChange={(e) => setTip(e.target.value)}></input></h1>
                             {/* Button down and up */}
-                            <div className="md:pl-2 flex pl-1">
+                            <div className="flex pl-1 md:pl-2 md:pt-2">
                                 <button onClick={handleIncreaseTIP}>
                                     <img src={ArrowUpImage} className="w-5 md:w-3" alt="Arrow Up"/>
                                 </button>
@@ -132,7 +132,7 @@ function Payment() {
                             </div>
                         </div>
                     </div>
-                    <button className="bg-violet-500 w-full h-8 md:h-10 rounded-xl mt-4 md:mt-14 fontDescription">Pay {totalPayment}$</button>
+                    <button className="bg-violet-500 w-full h-8 rounded-xl mt-4 fontDescription md:h-10 md:mt-14 ">Pay {totalPayment}$</button>
                 </div>
             )}  
         </div>
