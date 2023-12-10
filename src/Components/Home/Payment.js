@@ -5,7 +5,7 @@ import DownUpImage from "../../assets/img/down-up.png"
 function Payment() {
     let [Month, setMonth] = useState(0);
     let [Tip, setTip] = useState(0);
-    const [discordId, setDiscordId] = useState(''); // State to store Discord ID\
+    const [discordId, setDiscordId] = useState(''); // State to store Discord ID
     const eselonList = ['1', '2', '3', '4' /* Add other Eselon Discord IDs here */];
 
     const [isEselon, setIsEselon] = useState(false);
@@ -65,7 +65,7 @@ function Payment() {
 
     return(
         <div className="md:border-l-2 border-t-2 md:border-t-0 border-white mt-16 md:mt-0 md:pl-28">
-            <h1 className="title text-5xl pt-12 md:pt-2">Subcription Payment</h1>
+            <h1 className="title text-5xl pt-12 md:pt-2 lg:text-7xl">Subcription Payment</h1>
 
             {/* Form Discord ID and Month */}
             <div className="pt-8 md:pt-14 md:flex">
@@ -76,6 +76,7 @@ function Payment() {
                     onChange={handleDiscordIdChange}></input>
                     <h1 className="text-violet-500 text-xs mt-1">*please enter your discord id correctly.</h1>
                 </div>
+                {/* Month */}
                 <div className="pt-3 md:pt-0 md:ml-6 fontDescription">
                     <h1>Month</h1>
                     <div className="flex">
@@ -83,12 +84,13 @@ function Payment() {
                         value={Month}
                         onChange={handleInputMonth}
                         ></input>
-                        <div className="md:pl-2 pl-2">
+                        {/* Button Down and UP */}
+                        <div className="pl-2 md:pt-2 lg:pt-4">
                             <button onClick={handleIncreaseMonth}>
-                                <img src={ArrowUpImage} className="w-5 md:w-4 pt-1 md:pt-2" alt="Arrow Up"/>
+                                <img src={ArrowUpImage} className="w-5 md:w-4 lg:w-6" alt="Arrow Up"/>
                             </button>
                             <button onClick={handleDecreaseMonth}>
-                                <img src={DownUpImage} className="w-5 md:w-4 md:pb-4" alt="Arrow Down"/>
+                                <img src={DownUpImage} className="w-5 md:w-4 lg:w-6" alt="Arrow Down"/>
                             </button>
                         </div>
                     </div>
@@ -110,13 +112,16 @@ function Payment() {
                         <h1>Subscription</h1>
                         <h1 className="pl-24">{totalSubcription}$</h1>
                     </div>
+                    {/* Tip */}
                     <div className="grid grid-cols-2 md:pt-5">
                         <h1>Tip</h1>
                         <div className="flex">
                             <h1 className="pl-24">
+                            {/* Input TIP */}
                             <input className="w-64 h-9 md:w-10 md:h-6 rounded-xl bg-slate-200 md:mt-2 text-black text-center"
                             value={Tip}
-                            onChange={(e) => setTip(e.target.value)}></input></h1>
+                            onChange={(e) => setTip(e.target.value)}></input></h1>\
+                            {/* Button down and up */}
                             <div className="md:pl-2 flex pl-1">
                                 <button onClick={handleIncreaseTIP}>
                                     <img src={ArrowUpImage} className="w-5 md:w-3" alt="Arrow Up"/>
